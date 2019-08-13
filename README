@@ -1,0 +1,53 @@
+nadav366
+205457534
+Nadav Har-tuv
+I talked about the exercise with Guy Katz and Yair Shemer.
+
+A program includes various functions related to lists and loops:
+    A function that accepts a string input into list
+    A function that concatenates a string list into a single string
+    A function that receives a list of numbers and returns the maximum
+    A function that accepts two lists of numbers and checks whether
+        they are moving one another
+    A function that receives a number and returns the results of the
+        game seven boom up to it
+    A function that receives an n number and a list of numbers and returns
+        a list with the number of times each number to n is listed
+    A function that decomposes each number into its primes factors
+    A function that calculates the Cartesian product between two lists
+    A function that receives a list of numbers, and a n number returns
+        a list with number pairs from the list whose sum is n
+A program that test the maximum function.
+
+
+To test the maximum function I inserted as many end cases as possible,
+such as identical numbers, zero, incomplete, negative, or numbers in a different order.
+I chose these cases to "challenge" the code, and to check that it also works in different
+and extreme situations.
+
+Explain what will happen for the given tests:
+
+1. The software will fail.
+    The input is int type rather than string, so operations like len()
+    are not defined and the program will fail.
+
+2. The function returns -1. The code has no reference to positive or
+    negative numbers, so it will work as usual.
+
+3. The function will fail. In the code we compare numbers with members
+    from the list, and int can not be compared to string.
+
+4. The function will fail. In the code we create a n-length list
+    (that is, 3 in this case) and then access the cells when the number
+    in the list is an index. When there is a number 4, it tries to access
+    a cell that does not exist and therefore fails.
+
+5. The function returns []. The number 0 has no divisor
+    (and we have defined that 0 and 1 are not counted) and therefore the
+     list of distributors will return empty.
+
+6. The function returns [[0, 2], [0, 2], [0, 2], [0, 2], [1, 1]]
+    The reason is that each combination of 2 and 0 is in the sum of 2, and
+    there are four possible combinations when there are twice each number. 2 ^ 2.
+    In addition, the combination of 1 and 1 is also an amount of 2
+
